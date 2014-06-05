@@ -1,32 +1,30 @@
-#include <stdio.h> 
-int valores(int seq){ 
-int max, minimo;
- max==10;
- minimo==0;
+# include <stdio.h>
 
-    if (seq>=max){
-    
-        max=seq;   
+/* Elabore um programa que faça leitura de varios numeros inteiros, ate que e digite um numero negativo.
+O programa tem que retornar o maior e o menor numero lido.*/
+
+void Func_compare(){
+    float num1,num2,cont;
+    printf("Entre com um numero: \n");
+    scanf("%f", &cont);
+    num1 = num2 = cont;
+    while (cont >= 0){
+        printf("Entre com um numero: \n");
+        scanf("%f", &cont);
+        if (cont >= 0){
+            if (cont > num1){
+                num1 = cont;
+            }
+            if (cont < num2){
+                num2 = cont;
+            }
+        }
+    }
+    printf("Voce entrou com um numero negativo, o maior numero entrado eh: %1.f.\n O menor eh: %1.f.\n",num1,num2);
 }
-    else{ 
-        if ((seq <=minimo)&& (seq>=0)) 
-        minimo=seq;   
-    } 
 
-    if (seq<0){ 
-        printf("O maior numero da sequencia = \n\n->%d\n\n",max); 
-        printf("\nO menor numero da sequencia = \n\n->%d\n\n",minimo); 
-    } 
-} 
-int main(){ 
-    int x; 
-    x=0; 
-    printf("Digite os numeros\n\n"); 
-    while (x>=0){ 
-        scanf("%d",&x); 
-        valores(x); 
-    } 
-    return 0 ; 
-} 
+void main(){
 
+	 Func_compare();
 
+}
